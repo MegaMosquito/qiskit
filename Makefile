@@ -13,7 +13,7 @@ dev: build
 
 run:
 	-docker rm -f qiskit 2>/dev/null
-	docker run -d -e JUPYTER_TOKEN=$(JUPYTER_TOKEN) -p 8888:8888 --name qiskit $(DOCKERHUB_ID)/qiskit_arm:1.0.0
+	docker run -d -e JUPYTER_TOKEN=$(JUPYTER_TOKEN) -p 8888:8888 --restart unless-stopped --name qiskit $(DOCKERHUB_ID)/qiskit_arm:1.0.0
 
 push:
 	docker push $(DOCKERHUB_ID)/qiskit_arm:1.0.0
