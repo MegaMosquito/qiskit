@@ -48,7 +48,7 @@ make run
 
 ## To use the container
 
-Point your favorite browser at `<raspberry-pi-address>:8888/`. Enter the `JUPYTER_TOKEN` value you set in the Makefile, and you will see the familiar Jupyter Notebooks interface. There is once example notebook provided, `quantum_not_gate_qiskit.ipynb`. You can select it and run through it to verify everything is working.
+Point your favorite browser at `<raspberry-pi-address>:8888/`. Enter the `JUPYTER_TOKEN` value you set in the Makefile, and you will see the familiar Jupyter Notebooks interface. I installed just one example notebook, `quantum_not_gate_qiskit.ipynb`. You can select it and run through it to verify everything is working. To create your ownn notebook, pull down the "New" menu at the top right, and select "Python 3".
 
 ## To learn more
 
