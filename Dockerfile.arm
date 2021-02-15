@@ -36,13 +36,13 @@ RUN cd /pyscf/pyscf/lib/build && make
 RUN apt install -y gfortran
 
 #qiskit
-RUN pip install --prefer-binary qiskit-terra==0.15.*
-RUN pip install --prefer-binary qiskit-ignis==0.4.*
-RUN . ~/.cargo/env && pip install --prefer-binary qiskit-ibmq-provider==0.8.*
+RUN pip install --prefer-binary qiskit-terra==0.16.*
+RUN pip install --prefer-binary qiskit-ignis==0.5.*
+RUN . ~/.cargo/env && pip install --prefer-binary qiskit-ibmq-provider==0.11.*
 RUN apt install -y libhdf5-dev
-RUN pip install --prefer-binary qiskit-aqua==0.7.*
-RUN pip install --prefer-binary qiskit-aer==0.6.*
-RUN pip install --prefer-binary 'qiskit[visualization]==0.20.*'
+RUN pip install --prefer-binary qiskit-aqua==0.8.*
+RUN pip install --prefer-binary qiskit-aer==0.7.*
+RUN pip install --prefer-binary 'qiskit[visualization]==0.23.*'
 
 # check
 RUN pip list | grep qiskit
