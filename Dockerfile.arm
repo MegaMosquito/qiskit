@@ -53,12 +53,14 @@ RUN pip install jupyter
 # jupyter (run as non-root user under tini)
 RUN mkdir /.local
 RUN chmod 777 /.local
+RUN mkdir /.mpl
+RUN chmod 777 /.mpl
 RUN mkdir /jupyter
 RUN chmod 777 /jupyter
 RUN chown 10001:10001 /jupyter
 USER 10001
 WORKDIR /jupyter
 RUN curl -sSL https://raw.githubusercontent.com/JavaFXpert/qiskit4devs-workshop-notebooks/master/quantum_not_gate_qiskit.ipynb -O
-CMD cd /jupyter && MPLCONFIGDIR=/ /usr/local/bin/jupyter notebook --no-browser --ip=* --port 8888
+CMD cd /jupyter && MPLCONFIGDIR=/.mpl /usr/local/bin/jupyter notebook --no-browser --ip=* --port 8888
 
 
