@@ -6,9 +6,9 @@ There's a blog article to go along with this repo, here: [https://darlingevil.co
 
 QISKIT is both a quantum simulator (so you can perform quantum computing experiments at home!) and a tool that simplifies interfacing with IBM's quantum computing services in the IBM cloud. The Quantum Experience link below will guide you through the latter if you are interested in using the Real Thing!
 
-I just want to use the simulator for now, so I built this container to run on a Raspberry Pi 4B with 2GB RAM (with Raspberry Pi OS 10, buster).
+I just want to use the simulator for now, so I built this container to run on a Raspberry Pi 4B with 2GB RAM (with Raspberry Pi OS 10, buster). It should work on any Raspberry Pi model 2, 3, or 4, although you may need to expland swap space on the smaller machines as described below. It should also work on any 64-bit x86 host with Docker installed.
 
-The only prerequiste you need to install to use this container is docker. You can install docker on your Pi with this one command:
+The only prerequiste you need to install to use this container is docker. You can install docker on a Raspberry Pi with this one command:
 
 ```
 curl -sSL https://get.docker.com | sh
