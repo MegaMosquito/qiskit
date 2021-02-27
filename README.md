@@ -80,7 +80,7 @@ The official QISKIT documentation:
 
 I built a 3D model of the IBM-Q System One, and 3D printed it as the housing for my Raspberry Pi 4B where I am running my copy of this. It looks like this:
 
-![MegaMosquito's Mini-Q](https://raw.githubusercontent.com/MegaMosquito/qiskit/master/Mini-Q.png)
+![MegaMosquito's Mini-Q](https://github.com/MegaMosquito/qiskit/raw/main/Mini-Q.jpg)
 
 If you are interested in building this crazy thing too, you can download the 3D models here: [
 https://www.tinkercad.com/things/0tEbcpVzFRI](
