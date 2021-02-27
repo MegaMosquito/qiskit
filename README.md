@@ -2,6 +2,8 @@
 
 A docker container with QISKIT and Jupyter for Raspberry Pi.
 
+There's a blog article to go along with this repo, here: [https://darlingevil.com/your-own-quantum-computer/](https://darlingevil.com/your-own-quantum-computer/)
+
 QISKIT is both a quantum simulator (so you can perform quantum computing experiments at home!) and a tool that simplifies interfacing with IBM's quantum computing services in the IBM cloud. The Quantum Experience link below will guide you through the latter if you are interested in using the Real Thing!
 
 I just want to use the simulator for now, so I built this container to run on a Raspberry Pi 4B with 2GB RAM (with Raspberry Pi OS 10, buster).
@@ -26,7 +28,7 @@ docker ps
 
 ## To build this container
 
-NOTE: You need a little more than 2GB of RAM to build the docker container (about 3.4GB I think).  Note also that this extra memory is not needed to **run** the container, only to **build** it. A 4GB or 8GB Pi therefore won't need this step so don't bother with it. However, since I am using a 2GB machine, I increased the swap space with these commands:
+NOTE: You need a little more than 2GB of RAM to build the docker container (about 3.4GB I think).  Note also that this extra memory is not needed to **run** the container, only to **build** it. A 4GB or 8GB Pi therefore won't need this step so don't bother with it. However, since I am using a 2GB Raspberry Pi 4B, I increased the swap space with these commands:
 
 ```
 sudo sed -i 's/CONF_SWAPSIZE=100/CONF_SWAPSIZE=1024/' /etc/dphys-swapfile
@@ -40,9 +42,9 @@ Once you have that sorted out, these are the build steps:
 
 2. Edit the Makefile to set the `JUPYTER_TOKEN`. This is the token you will use to login to the Jupyter Notebook created by this container. So keep it secret. Keep it safe. :-)
 
-3. Run `make build`. You should expect this to take a very long time. On my little Pi4B/2GB it took me more than 6.5 hours to run `make build`. Notably, the file, `lda_c_pk09.c.o` alone takes something like 30 minutes to build (and it also happens to be the first one, perhaps the only one, that causes memory to run out with just 2GB of RAM and the default 100MB of swap).
+3. Run `make build`. You should expect this to take a very long time. On my little Pi4B/2GB it took me more than 6.5 hours to run `make build`. Notably, the file, `lda_c_pk09.c.o` alone takes something like 30 minutes to build (and it also happens to be the first one, perhaps the only one, that causes memory to run out with just 2GB of RAM and the default 100MB of swap). It builds much faster on an Intel i7 CPU.
 
-4. Optionally you can push your image to DockerHub so you don't ever have to build it again:
+4. Optionally you can push your container image to DockerHub so you don't ever have to build it again:
 
 ```
 make push
@@ -73,5 +75,15 @@ The IBM Quantum Experience getting started guide:
 
 The official QISKIT documentation:
     [https://qiskit.org/documentation/](https://qiskit.org/documentation/)
+
+## For fun
+
+I built a 3D model of the IBM-Q System One, and 3D printed it as the housing for my Raspberry Pi 4B where I am running my copy of this. It looks like this:
+
+![MegaMosquito's Mini-Q](https://raw.githubusercontent.com/MegaMosquito/qiskit/master/Mini-Q.png)
+
+If you are interested in building this crazy thing too, you can download the 3D models here: [
+https://www.tinkercad.com/things/0tEbcpVzFRI](
+https://www.tinkercad.com/things/0tEbcpVzFRI)
 
 
