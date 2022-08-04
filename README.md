@@ -70,7 +70,7 @@ Point your favorite browser at `<raspberry-pi-address>:8888/`. Enter the `JUPYTE
 This YouTube video gives a brief QISKIT primer:
     [https://www.youtube.com/watch?v=V3hXSftZuoc](https://www.youtube.com/watch?v=V3hXSftZuoc)
 
-I took the quantum NOT gate example from this set of guided exercises:
+The quantum NOT gate example from this set of guided exercises:
     [https://github.com/JavaFXpert/qiskit4devs-workshop-notebooks](https://github.com/JavaFXpert/qiskit4devs-workshop-notebooks)
 
 The IBM Quantum Experience getting started guide:
