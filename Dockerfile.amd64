@@ -6,7 +6,7 @@ RUN pip3 install --upgrade pip
 # check
 RUN python --version
 RUN pip --version
-RUn curl --version
+RUN curl --version
 
 WORKDIR /
 
