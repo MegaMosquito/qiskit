@@ -1,14 +1,17 @@
 # QISKIT
 
-A docker container with QISKIT and Jupyter for Raspberry Pi.
+This is an Open Horizon services configuration to deploy a docker container with QISKIT and Jupyter for Raspberry Pi.
 
-There's a blog article to go along with this repo, here: [https://darlingevil.com/your-own-quantum-computer/](https://darlingevil.com/your-own-quantum-computer/)
+QISKIT is both a quantum simulator and a tool that simplifies interfacing with IBM's quantum computing services in the IBM cloud. The Quantum Experience link below will guide you through the latter if you are interested in using the real thing!
 
-QISKIT is both a quantum simulator (so you can perform quantum computing experiments at home!) and a tool that simplifies interfacing with IBM's quantum computing services in the IBM cloud. The Quantum Experience link below will guide you through the latter if you are interested in using the Real Thing!
+There's a blog article to go along with this repo, here: 
+[https://darlingevil.com/your-own-quantum-computer/](https://darlingevil.com/your-own-quantum-computer/)
 
-I just want to use the simulator for now, so I built this container to run on a Raspberry Pi 4B with 2GB RAM (with Raspberry Pi OS 10, buster). It should work on any Raspberry Pi model 2, 3, or 4, although you may need to expland swap space on the smaller machines as described below. It should also work on any 64-bit x86 host with Docker installed.
+This container was built to run on a Raspberry Pi 4B with 2GB RAM (with Raspberry Pi OS 10, buster). It should work on any Raspberry Pi model 2, 3, or 4, although you may need to expland swap space on the smaller machines as described below. It should also work on any 64-bit x86 host with Docker installed.
 
-The only prerequiste you need to install to use this container is docker. You can install docker on a Raspberry Pi with this one command:
+## Prerequisites
+
+You need to install to use this container is docker. You can install docker on a Raspberry Pi with this one command:
 
 ```
 curl -sSL https://get.docker.com | sh
@@ -75,15 +78,3 @@ The IBM Quantum Experience getting started guide:
 
 The official QISKIT documentation:
     [https://qiskit.org/documentation/](https://qiskit.org/documentation/)
-
-## For fun
-
-I built a 3D model of the IBM-Q System One, and 3D printed it as the housing for my Raspberry Pi 4B where I am running my copy of this. It looks like this:
-
-![MegaMosquito's Mini-Q](https://github.com/MegaMosquito/qiskit/raw/main/Mini-Q.jpg)
-
-If you are interested in building this crazy thing too, you can download the 3D models here: [
-https://www.tinkercad.com/things/0tEbcpVzFRI](
-https://www.tinkercad.com/things/0tEbcpVzFRI)
-
-
